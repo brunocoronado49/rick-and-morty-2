@@ -1,0 +1,31 @@
+.navbar {
+    background-color: #101010;
+    display: flex;
+    justify-content: space-between;
+}
+
+.container-logo {
+    display: flex;
+    justify-content: left;
+    padding: 20px;
+    width: auto;
+    margin-left: 5%;
+}
+
+.logo {
+    width: 200px;
+}
+
+.container-autor {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    width: auto;
+    margin-right: 5%;
+}
+
+.autor {
+    color: #dedede;
+    font-size: larger;
+    font-weight: bold;
+}
