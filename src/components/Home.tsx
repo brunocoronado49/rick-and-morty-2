@@ -1,6 +1,5 @@
 import React from "react";
-import { Navbar } from "./Navbar";
-import { Content } from './Content'
+import { Navbar, Content } from "./index";
 import "../styles/home.css";
 
 export const Home: React.FC = () => {
