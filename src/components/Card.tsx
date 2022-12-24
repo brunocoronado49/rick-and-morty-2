@@ -22,18 +22,21 @@ export const Card: React.FC<IProps> = ({
                         <>
                             <div className="status-alert">
                                 {status == "Alive" ? (
-                                    <div className="alive"></div>
+                                    <span className="alive-status"></span>
+                                ) : status == "unknown" ? (
+                                    <span className="other-status"></span>
                                 ) : (
-                                    <div className="dead"></div>
+                                    <span className="dead-status"></span>
                                 )}
                             </div>
                             <p className="info-character">
                                 {status} - {species}
                             </p>
-                            <h5>{location.name}</h5>
                         </>
                     }
                 </div>
+                <p className="info-title">Last location:</p>
+                <p className="card-location">{location.name}</p>
             </div>
         </div>
     );

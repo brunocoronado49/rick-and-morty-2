@@ -1,5 +1,6 @@
 import { SetStateAction } from "react";
 import { IProps } from "../interfaces/interfaces";
+import { charactersUrl } from "./ednpoint";
 
 export const getCharactersFetch = async (
     page: number,
@@ -7,9 +8,8 @@ export const getCharactersFetch = async (
     setLoading: (loading: boolean) => void
 ): Promise<{} | undefined> => {
     try {
-        const response: Response = await fetch(
-            `https://rickandmortyapi.com/api/character?page=${page}`
-        );
+        const url = `${charactersUrl}?page=${page}`;
+        const response: Response = await fetch(url);
         const data: any = await response.json();
         setLoading(false);
         setCharacters(data.results);
@@ -18,3 +18,11 @@ export const getCharactersFetch = async (
         return;
     }
 };
+
+export const getLocationsFetch = async (): Promise<{} | undefined> => {
+    return;
+}
+
+export const getEpisodesFetch = async (): Promise<{} | undefined> => {
+    return;
+}

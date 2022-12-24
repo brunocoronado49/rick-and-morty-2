@@ -12,7 +12,7 @@
     border: none;
     text-transform: uppercase;
     font-weight: bold;
-    border: 1px solid #23818e;
+    border: 2px solid #23818e;
     border-radius: 8px;
 }
 
@@ -23,7 +23,7 @@
 
 .current-page {
     padding: 10px 20px 10px 20px;
-    border: 1px solid #23818e;
+    border: 2px solid #23818e;
     border-radius: 8px;
     font-size: 28px;
     font-weight: bold;

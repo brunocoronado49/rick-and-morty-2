@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { IProps } from "../interfaces/interfaces";
-import { getCharactersFetch } from "../API/endpoints";
+import { getCharactersFetch } from "../API/services";
 
 export const useCustomHook = () => {
     const [characters, setCharacters] = useState<IProps[]>([]);

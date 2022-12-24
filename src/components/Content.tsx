@@ -1,5 +1,5 @@
 import React from "react";
-import { List, NavPage } from "./index";
+import { List, NavPage, Menu } from "./index";
 import { useCustomHook } from "../hooks/useCustomHook";
 import "../styles/content.css";
 
@@ -15,7 +15,8 @@ export const Content: React.FC = () => {
             />
             <div className="content-row">
                 <div className="content-col">
-                    <h1 className="comming-soon">Comming soon...</h1>
+                    <h1 className="comming-soon">Menu</h1>
+                    <Menu />
                 </div>
                 <div className="content-col">
                     <List characters={characters} loading={loading} />
