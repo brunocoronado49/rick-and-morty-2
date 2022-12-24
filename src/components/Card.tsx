@@ -1,5 +1,6 @@
 import React from "react";
 import { IProps } from "../interfaces/interfaces";
+import "../styles/card.css";
 
 export const Card: React.FC<IProps> = ({
     id,
@@ -7,12 +8,12 @@ export const Card: React.FC<IProps> = ({
     status,
     species,
     image,
-    location
+    location,
 }) => {
     return (
         <div className="card">
             <div className="card-image">
-                <img src={image} alt={name} />
+                <img src={image} alt={name} className="img-card" />
             </div>
             <div className="card-info">
                 <h3 className="card-name-character">{name}</h3>
@@ -27,7 +28,7 @@ export const Card: React.FC<IProps> = ({
                                 )}
                             </div>
                             <p className="info-character">
-                                {status} - {species} - {id}
+                                {status} - {species}
                             </p>
                             <h5>{location.name}</h5>
                         </>

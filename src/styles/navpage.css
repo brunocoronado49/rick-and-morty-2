@@ -1,0 +1,30 @@
+.current-page-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 40px 40px 40px;
+    padding-top: 50px;
+    align-items: center;
+}
+
+.btn-change-page {
+    background-color: transparent;
+    padding: 20px 30px 20px 30px;
+    border: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    border: 1px solid #23818e;
+    border-radius: 8px;
+}
+
+.btn-change-page:hover {
+    cursor: pointer;
+    background-color: #23818e;
+}
+
+.current-page {
+    padding: 10px 20px 10px 20px;
+    border: 1px solid #23818e;
+    border-radius: 8px;
+    font-size: 28px;
+    font-weight: bold;
+}
