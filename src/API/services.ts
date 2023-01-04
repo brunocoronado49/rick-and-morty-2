@@ -1,5 +1,9 @@
 import { SetStateAction } from "react";
-import { IProps } from "../interfaces/interfaces";
+import {
+    IProps,
+    IPropsLocation,
+    IPropsEpisode,
+} from "../interfaces/interfaces";
 import { charactersUrl } from "./ednpoint";
 
 export const getCharactersFetch = async (
@@ -19,10 +23,18 @@ export const getCharactersFetch = async (
     }
 };
 
-export const getLocationsFetch = async (): Promise<{} | undefined> => {
+export const getLocationsFetch = async (
+    page: number,
+    setLocations: (characters: SetStateAction<[]>) => void,
+    setLoading: (loading: boolean) => void
+): Promise<{} | undefined> => {
     return;
-}
+};
 
-export const getEpisodesFetch = async (): Promise<{} | undefined> => {
+export const getEpisodesFetch = async (
+    page: number,
+    setEpisode: (characters: SetStateAction<[]>) => void,
+    setLoading: (loading: boolean) => void
+): Promise<{} | undefined> => {
     return;
-}
+};

@@ -1,3 +1,5 @@
+import { SetStateAction } from "react";
+
 export interface IProps {
     id: any;
     name: string;
@@ -8,6 +10,10 @@ export interface IProps {
     };
     image: string;
 }
+
+export interface IPropsLocation {}
+
+export interface IPropsEpisode {}
 
 export interface ICurrentPage {
     currentPage: number;
