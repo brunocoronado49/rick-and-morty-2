@@ -11,9 +11,17 @@ export interface IProps {
     image: string;
 }
 
-export interface IPropsLocation {}
+export interface IPropsLocation {
+    name: string;
+    type: string;
+    dimension: string;
+}
 
-export interface IPropsEpisode {}
+export interface IPropsEpisode {
+    name: string;
+    air_date: string;
+    episode: string;
+}
 
 export interface ICurrentPage {
     currentPage: number;

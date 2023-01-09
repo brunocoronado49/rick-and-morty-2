@@ -4,7 +4,7 @@ import {
     IPropsLocation,
     IPropsEpisode,
 } from "../interfaces/interfaces";
-import { charactersUrl } from "./ednpoint";
+import { charactersUrl, locationsUrl, episodesUrl } from "./ednpoint";
 
 export const getCharactersFetch = async (
     page: number,
@@ -25,16 +25,34 @@ export const getCharactersFetch = async (
 
 export const getLocationsFetch = async (
     page: number,
-    setLocations: (characters: SetStateAction<[]>) => void,
+    setLocations: (locations: SetStateAction<IPropsLocation[]>) => void,
     setLoading: (loading: boolean) => void
 ): Promise<{} | undefined> => {
-    return;
+    try {
+        const url = `${locationsUrl}?page=${page}`;
+        const response: Response = await fetch(url);
+        const data: any = await response.json();
+        setLoading(false);
+        setLocations(data.results);
+    } catch (err) {
+        console.log(err);
+        return;
+    }
 };
 
 export const getEpisodesFetch = async (
     page: number,
-    setEpisode: (characters: SetStateAction<[]>) => void,
+    setEpisode: (episodes: SetStateAction<IPropsEpisode[]>) => void,
     setLoading: (loading: boolean) => void
 ): Promise<{} | undefined> => {
-    return;
+    try {
+        const url = `${episodesUrl}?page=${page}`;
+        const response: Response = await fetch(url);
+        const data: any = await response.json();
+        setLoading(false);
+        setEpisode(data.results)
+    } catch (err) {
+        console.log(err);
+        return;
+    }
 };
