@@ -1,14 +1,23 @@
 import React from "react";
+import { Route } from "wouter";
 import "../styles/menu.css";
 
 export const Menu: React.FC = () => {
     return (
         <div className="menu">
             <ul className="ul-menu">
-                <li className="li-menu">Characters</li>
-                <li className="li-menu">Locations</li>
-                <li className="li-menu">Episodes</li>
-                <li className="li-menu">About</li>
+                <Route path="/characters">
+                    <li className="li-menu">Characters</li>
+                </Route>
+                <Route path="/characters">
+                    <li className="li-menu">Locations</li>
+                </Route>
+                <Route path="/characters">
+                    <li className="li-menu">Episodes</li>
+                </Route>
+                <Route path="/characters">
+                    <li className="li-menu">About</li>
+                </Route>
             </ul>
         </div>
     );

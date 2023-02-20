@@ -12,19 +12,21 @@
     border: none;
     text-transform: uppercase;
     font-weight: bold;
-    border: 2px solid #23818e;
+    background-color: #1c2130;
+    color: #ecf0f1;
     border-radius: 8px;
 }
 
 .btn-change-page:hover {
     cursor: pointer;
-    background-color: #23818e;
+    background-color: #ecf0f1;
+    border: 2px solid #1c2130;
+    color: #1c2130;
 }
 
 .current-page {
     padding: 10px 20px 10px 20px;
-    border: 2px solid #23818e;
     border-radius: 8px;
-    font-size: 28px;
+    font-size: 50px;
     font-weight: bold;
 }

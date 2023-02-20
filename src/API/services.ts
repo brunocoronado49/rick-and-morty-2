@@ -6,6 +6,7 @@ import {
 } from "../interfaces/interfaces";
 import { charactersUrl, locationsUrl, episodesUrl } from "./ednpoint";
 
+// Llamada para obtener y guardar a los personajes
 export const getCharactersFetch = async (
     page: number,
     setCharacters: (characters: SetStateAction<IProps[]>) => void,
@@ -23,6 +24,7 @@ export const getCharactersFetch = async (
     }
 };
 
+// Obteniendo locaciones
 export const getLocationsFetch = async (
     page: number,
     setLocations: (locations: SetStateAction<IPropsLocation[]>) => void,
@@ -40,6 +42,7 @@ export const getLocationsFetch = async (
     }
 };
 
+// Obteniendo episodios
 export const getEpisodesFetch = async (
     page: number,
     setEpisode: (episodes: SetStateAction<IPropsEpisode[]>) => void,

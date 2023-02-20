@@ -1,9 +1,19 @@
 import { useEffect, useState } from "react";
-import { IProps } from "../interfaces/interfaces";
-import { getCharactersFetch } from "../API/services";
+import {
+    IProps,
+    IPropsLocation,
+    IPropsEpisode,
+} from "../interfaces/interfaces";
+import {
+    getCharactersFetch,
+    getLocationsFetch,
+    getEpisodesFetch,
+} from "../API/services";
 
 export const useCustomHook = () => {
     const [characters, setCharacters] = useState<IProps[]>([]);
+    const [locations, setLocations] = useState<IPropsLocation[]>([]);
+    const [episodes, setEpisodes] = useState<IPropsEpisode[]>([]);
     const [loading, setLoading] = useState<boolean>(true);
     const [page, setPage] = useState<number>(1);
 
@@ -17,7 +27,17 @@ export const useCustomHook = () => {
 
     useEffect(() => {
         getCharactersFetch(page, setCharacters, setLoading);
+        getLocationsFetch(page, setLocations, setLoading);
+        getEpisodesFetch(page, setEpisodes, setLoading);
     }, [page]);
 
-    return { page, lastPage, nextPage, characters, loading };
+    return {
+        page,
+        lastPage,
+        nextPage,
+        characters,
+        locations,
+        episodes,
+        loading,
+    };
 };

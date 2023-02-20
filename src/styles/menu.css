@@ -1,11 +1,11 @@
 .menu {
     margin-left: 40px;
     margin-top: 20px;
-    border: 2px solid #23818e;
+    border: none;
     padding: 20px;
     width: 70%;
     border-radius: 8px;
-    background-color:black;
+    background-color: #1c2130;
 }
 
 .ul-menu {
@@ -16,9 +16,10 @@
     margin-bottom: 20px;
     font-size: 28px;
     font-weight: bold;
+    color: #ecf0f1;
 }
 
 .li-menu:hover {
     cursor: pointer;
-    color: #23818e;
+    color: #7ab317;
 }
