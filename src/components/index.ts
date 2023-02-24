@@ -5,4 +5,3 @@ export * from "./List";
 export * from "./Loading";
 export * from "./NavPage";
 export * from "./Navbar";
-export * from "./Menu";

@@ -15,10 +15,6 @@ export const Content: React.FC = () => {
             />
             <div className="content-row">
                 <div className="content-col">
-                    <h1 className="comming-soon">Menu</h1>
-                    <Menu />
-                </div>
-                <div className="content-col">
                     <List characters={characters} loading={loading} />
                 </div>
             </div>

@@ -1,13 +1,6 @@
 .content-row {
     display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
-}
-
-.content-col:first-child {
-    width: 30%;
-}
-
-/* ====================== */
-.comming-soon {
-    margin-left: 40px;
 }
